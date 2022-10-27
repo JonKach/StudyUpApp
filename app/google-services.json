@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "494090282362",
+    "project_id": "study-up-app",
+    "storage_bucket": "study-up-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:494090282362:android:d1255be0d81e7964b9a2c3",
+        "android_client_info": {
+          "package_name": "com.example.studyupapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "494090282362-3se2p99f7730gmscfdiqp85osvj7vi7b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAL2HsPwitY17O_mUQUya3X7B6b1V413gg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "494090282362-3se2p99f7730gmscfdiqp85osvj7vi7b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FlashcardsEditor">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/flashcardsEditorHeading"
+        android:layout_width="414dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="@color/off_white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/doneFlashcardsEditButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_700"
+        android:text="done"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/flashcardsEditorHeading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintStart_toEndOf="@+id/flashcardSetNameEnter"
+        app:layout_constraintTop_toTopOf="@+id/flashcardsEditorHeading"
+        app:layout_constraintVertical_bias="0.391" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/flashcardsRecycler"
+        android:layout_width="415dp"
+        android:layout_height="442dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:elevation="-10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flashcardsEditorHeading"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/flashcard_text_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="125dp"
+        android:elevation="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="136dp">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/addFlashcardButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:elevation="80dp"
+                android:scaleX="1.2"
+                android:scaleY="1.2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/flashcard_answer_enter"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/ic_input_add"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/flashcard_answer_enter"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:elevation="80dp"
+                android:ems="10"
+                android:hint="Flashcard Answer"
+                android:inputType="textMultiLine"
+                android:minHeight="48dp"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.144"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/flashcard_prompt_enter"
+                app:layout_constraintVertical_bias="0.407" />
+
+            <EditText
+                android:id="@+id/flashcard_prompt_enter"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:elevation="80dp"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="Flashcard Prompt"
+                android:inputType="textMultiLine"
+                android:minHeight="48dp"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.144"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/flashcardSetNameEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Flashcard Set Name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:elevation="90dp"
+        app:layout_constraintEnd_toEndOf="@+id/flashcardsEditorHeading"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="@+id/flashcardsEditorHeading"
+        app:layout_constraintTop_toTopOf="@+id/flashcardsEditorHeading" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
